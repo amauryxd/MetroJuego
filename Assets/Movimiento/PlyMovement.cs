@@ -9,17 +9,21 @@ public class PlyMovement : MonoBehaviour
     public float PLYspeed;
     public Vector2 sensibility;
     public GameObject camara;
+    public float gravedad;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
+        
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         float hor = Input.GetAxisRaw("Horizontal");
         float ver = Input.GetAxisRaw("Vertical");
         float mousehor = Input.GetAxis("Mouse X");
@@ -29,12 +33,14 @@ public class PlyMovement : MonoBehaviour
         {
             Vector3 directionf = (transform.forward * ver).normalized; 
             Vector3 directionh = (transform.right * hor).normalized;
-            rb.velocity = (directionf+directionh) * PLYspeed;
-            Debug.Log(rb.velocity);
+            //rb.velocity = (directionf+directionh+new Vector3(0,-gravedad,0)) * PLYspeed;
+            //rb.velocity = new Vector3(ver * -PLYspeed, -9.81f, hor* -PLYspeed);
+            rb.velocity = new Vector3((directionf.x + directionh.x) * PLYspeed, -gravedad, (directionf.z + directionh.z) * PLYspeed);
+            Debug.Log(hor);
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = new Vector3(0, -gravedad, 0);
         }
 
         if(mousehor != 0)
