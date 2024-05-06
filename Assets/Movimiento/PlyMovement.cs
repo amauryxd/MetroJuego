@@ -36,7 +36,7 @@ public class PlyMovement : MonoBehaviour
             //rb.velocity = (directionf+directionh+new Vector3(0,-gravedad,0)) * PLYspeed;
             //rb.velocity = new Vector3(ver * -PLYspeed, -9.81f, hor* -PLYspeed);
             rb.velocity = new Vector3((directionf.x + directionh.x) * PLYspeed, -gravedad, (directionf.z + directionh.z) * PLYspeed);
-            Debug.Log(hor);
+            //Debug.Log(hor);
         }
         else
         {
