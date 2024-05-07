@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class Travelqp : MonoBehaviour
 {
-    public GameObject canvas;
+    public GameObject PanelMap;
     private bool Hidden;
     private bool OpenVisible;
     private bool Interact;
 
     public void Start()
     {
-        canvas.SetActive(Hidden);
+        PanelMap.SetActive(Hidden);
         OpenVisible = false;
         Interact = false;
     }
@@ -23,7 +23,7 @@ public class Travelqp : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.M) && OpenVisible == false)
             {
-                canvas.SetActive(!Hidden);
+                PanelMap.SetActive(!Hidden);
                 Cursor.lockState = CursorLockMode.None;
                 GetComponent<PlyMovement>().enabled = false;
                 OpenVisible = true;
@@ -32,7 +32,7 @@ public class Travelqp : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 GetComponent<PlyMovement>().enabled = true;
-                canvas.SetActive(Hidden);
+                PanelMap.SetActive(Hidden);
                 OpenVisible = false;
             }
         }
