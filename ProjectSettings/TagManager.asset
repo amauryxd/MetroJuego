@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - DropPoint
+  - Enemy
+  - ranged
+  - melee
   layers:
   - Default
   - TransparentFX
