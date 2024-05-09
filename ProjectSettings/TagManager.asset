@@ -5,9 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - DropPoint
+<<<<<<< Updated upstream
   - Enemy
   - ranged
   - melee
+=======
+  - Interactuable
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

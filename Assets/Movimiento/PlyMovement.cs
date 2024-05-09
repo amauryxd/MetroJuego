@@ -10,7 +10,7 @@ public class PlyMovement : MonoBehaviour
     public Vector2 sensibility;
     public GameObject camara;
     public float gravedad;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -56,4 +56,6 @@ public class PlyMovement : MonoBehaviour
             camara.transform.localEulerAngles = Vector3.right * angle;
         }
     }
+
+   
 }
