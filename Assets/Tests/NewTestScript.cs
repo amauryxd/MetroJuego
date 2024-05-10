@@ -11,14 +11,14 @@ public class NewTestScript
     public void NewTestScriptSimplePasses()
     {
         // Arrange
-        //EnemyHealth prueba = new EnemyHealth();
-        //int vidaSnapshot = prueba.vidaMaloso;
+        EnemyHealth prueba = new EnemyHealth();
+        int vidaSnapshot = prueba.vidaMaloso;
 
         // Act
-        //prueba.vidaMaloso -= 1;
+        prueba.vidaMaloso--;
 
         // Assert
-        //Assert.AreNotEqual(prueba.vidaMaloso, vidaSnapshot, "El enemigo Recibio un golpe");
+        Assert.AreNotEqual(prueba.vidaMaloso, vidaSnapshot, "El enemigo Recibio un golpe");
         //Assert.AreEqual(prueba.vidaMaloso, vidaSnapshot, "El enemigo no reicibio un golpe");
     }
 
@@ -30,5 +30,15 @@ public class NewTestScript
         // Use the Assert class to test conditions.
         // Use yield to skip a frame.
         yield return null;
+        // Arrange
+        EnemyHealth prueba = new EnemyHealth();
+        int vidaSnapshot = prueba.vidaMaloso;
+
+        // Act
+        prueba.vidaMaloso--;
+
+        // Assert
+        Assert.AreNotEqual(prueba.vidaMaloso, vidaSnapshot, "El enemigo Recibio un golpe");
+        //Assert.AreEqual(prueba.vidaMaloso, vidaSnapshot, "El enemigo no reicibio un golpe");
     }
 }
