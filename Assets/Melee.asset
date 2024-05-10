@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd0687c0ab8b5644bbb74caef45cdd94, type: 3}
-  m_Name: Pistola
+  m_Name: Melee
   m_EditorClassIdentifier: 
-  itemName: Pistola
-  img: {fileID: 21300000, guid: d56222d8576ef1e4492dd7f428e704a5, type: 3}
-  modelo: {fileID: 4896060718970150405, guid: 574fa3cee9775ed4ab38da4351b6c86e, type: 3}
-  descrip: Piu piu
-  isGun: 1
-  isMelee: 0
+  itemName: Cuchillo
+  img: {fileID: 21300000, guid: dc16847c80185f548a240f1474a96d15, type: 3}
+  modelo: {fileID: 7851616566221020810, guid: 0ed65086e7c03a14d8a3cd5528bd0c54, type: 3}
+  descrip: Te puedes cortar
+  isGun: 0
+  isMelee: 1

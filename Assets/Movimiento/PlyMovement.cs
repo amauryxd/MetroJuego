@@ -42,18 +42,19 @@ public class PlyMovement : MonoBehaviour
         {
             rb.velocity = new Vector3(0, -gravedad, 0);
         }
-
-        if(mousehor != 0)
-        {
-            transform.Rotate(Vector3.up * mousehor * sensibility.x);
-        }
-        if(mousever != 0)
-        {
-            //camara.transform.Rotate(Vector3.left * ver * sensibility.y);
-            float angle = (camara.transform.localEulerAngles.x - mousever * sensibility.y+360)%360;
-            if(angle > 180) { angle -= 360; }
-            angle = Mathf.Clamp(angle, -80, 80);
-            camara.transform.localEulerAngles = Vector3.right * angle;
+        if (Inventory.canMoveCamera) {
+            if (mousehor != 0)
+            {
+                transform.Rotate(Vector3.up * mousehor * sensibility.x);
+            }
+            if (mousever != 0)
+            {
+                //camara.transform.Rotate(Vector3.left * ver * sensibility.y);
+                float angle = (camara.transform.localEulerAngles.x - mousever * sensibility.y + 360) % 360;
+                if (angle > 180) { angle -= 360; }
+                angle = Mathf.Clamp(angle, -80, 80);
+                camara.transform.localEulerAngles = Vector3.right * angle;
+            }
         }
     }
 

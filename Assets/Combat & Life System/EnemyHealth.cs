@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public int vidaMaloso = 100;
     private void Update()
     {
-       // Debug.Log(vidaMaloso);
+        //Debug.Log(vidaMaloso);
     }
     
 }

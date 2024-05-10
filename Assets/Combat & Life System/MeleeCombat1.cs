@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class MeleeCombat1 : MonoBehaviour
 {
-    public bool Melee = false;
+    public static bool Melee = false;
+
+    private void Start()
+    {
+        Melee = false;
+    }
     void OnTriggerStay(Collider other)
     {
+        Debug.Log(Melee);
         if (Melee == true)
         {
             if(Input.GetMouseButtonDown(0))
@@ -14,6 +20,7 @@ public class MeleeCombat1 : MonoBehaviour
                 if (other.CompareTag("Enemy"))
                 {
                     other.GetComponent<EnemyHealth>().vidaMaloso--;
+                    Debug.Log("Vida del enemigo: "+ other.GetComponent<EnemyHealth>().vidaMaloso);
                 }
             }
         }

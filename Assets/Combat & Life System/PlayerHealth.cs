@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public int vidaPlayer = 100;
     private void Update()
     {
-        Debug.Log(vidaPlayer);
+        //Debug.Log(vidaPlayer);
     }
 
 }
