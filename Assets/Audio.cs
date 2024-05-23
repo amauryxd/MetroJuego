@@ -12,14 +12,14 @@ public class Audio : MonoBehaviour
     void Start()
     {
         source = GetComponent<AudioSource>();
-        StartCoroutine(Elegirsonido());
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-  
+       
     }
     private IEnumerator Elegirsonido()
     {
@@ -29,5 +29,15 @@ public class Audio : MonoBehaviour
         yield return new WaitForSeconds(time);
         }
     }
-    
+    private void sonido()
+    {
+        indicador = Random.Range(1, 4);
+        if (indicador == 3)
+        {
+            source.clip = SonidosRandom[Random.Range(0, SonidosRandom.Length)];
+            source.Play();
+        }
+        Debug.Log(indicador);
+        //8000 HZ CALIDAD 1
+    }
 }

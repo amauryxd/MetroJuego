@@ -1600,6 +1600,7 @@ GameObject:
   - component: {fileID: 419989183}
   - component: {fileID: 419989182}
   - component: {fileID: 419989181}
+  - component: {fileID: 419989184}
   m_Layer: 0
   m_Name: Audiosoucrce
   m_TagString: Untagged
@@ -1620,10 +1621,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SonidosRandom:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  time: 3
+  - {fileID: 8300000, guid: 1bc8a5a96e1dade4594cd1a9a577cce1, type: 3}
+  - {fileID: 8300000, guid: c81948cfc722ee64083785eedbd39b1b, type: 3}
+  - {fileID: 8300000, guid: 1bc8a5a96e1dade4594cd1a9a577cce1, type: 3}
+  time: 10
   indicador: 0
 --- !u!82 &419989182
 AudioSource:
@@ -1637,13 +1638,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.486
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 124
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1736,6 +1737,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &419989184
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419989180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab7ec5796862b7b47874596cd4509dcb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &433464931
 GameObject:
   m_ObjectHideFlags: 0
