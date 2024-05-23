@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Melee
   m_EditorClassIdentifier: 
   itemName: Cuchillo
-  img: {fileID: 21300000, guid: dc16847c80185f548a240f1474a96d15, type: 3}
-  modelo: {fileID: 7851616566221020810, guid: 0ed65086e7c03a14d8a3cd5528bd0c54, type: 3}
+  img: {fileID: 21300000, guid: e97ab5514f21c6d45acdd36bba9c0caf, type: 3}
+  modelo: {fileID: 919132149155446097, guid: 35401fda2a7f6f44ab939c6a7053eeea, type: 3}
   descrip: Te puedes cortar
   isGun: 0
   isMelee: 1

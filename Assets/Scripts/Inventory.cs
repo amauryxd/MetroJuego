@@ -163,7 +163,10 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
+
     }
     public void MostrarObjetoC2()
     {
@@ -176,6 +179,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
     public void MostrarObjetoC3()
@@ -189,6 +194,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
     public void MostrarObjetoC4()
@@ -202,6 +209,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
     public void MostrarObjetoC5()
@@ -215,6 +224,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
     public void MostrarObjetoC6()
@@ -228,6 +239,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
     public void MostrarObjetoC7()
@@ -241,6 +254,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
     public void MostrarObjetoC8()
@@ -254,6 +269,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
     public void MostrarObjetoC9()
@@ -267,6 +284,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
     public void MostrarObjetoCA()
@@ -280,6 +299,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
     public void MostrarObjetoCB()
@@ -293,6 +314,8 @@ public class Inventory : MonoBehaviour
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
             }
+            nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
+            desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
         }
     }
 }
