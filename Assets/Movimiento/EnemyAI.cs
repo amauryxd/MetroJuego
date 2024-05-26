@@ -26,6 +26,7 @@ public class EnemyAI : MonoBehaviour
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+    public Animator animator;
 
     private void Start()
     {
@@ -47,6 +48,8 @@ public class EnemyAI : MonoBehaviour
     private void Patrolling()
     {
         meshRenderer.material.color = Color.green;
+
+        animator.SetBool("Run", false);
 
         if (!walkPointSet) SearchWalkPoint();
 
@@ -72,12 +75,18 @@ public class EnemyAI : MonoBehaviour
     {
         meshRenderer.material.color = Color.yellow;
 
+        animator.SetBool("Run", true);
+
         agent.SetDestination(player.position);
     }
 
     private void Attacking()
     {
         meshRenderer.material.color = Color.red;
+
+        animator.SetTrigger("Attack");
+
+        animator.SetBool("Run", false);
 
         agent.SetDestination(transform.position);
         transform.LookAt(player);
