@@ -23,6 +23,7 @@ public class Inventory : MonoBehaviour
     public bool isEquiped;
     public GameObject arma1;
     public GameObject arma2;
+    public GameObject itemlight;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,15 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(isHovering)
+        {
+            itemlight.SetActive(true);
+        }
+        else
+        {
+            itemlight.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.I) && abierto==false)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -115,8 +124,8 @@ public class Inventory : MonoBehaviour
         Destroy(prehecho);
         instanciado = false;
         isHovering = false;
-        nombre.text = "Nombre";
-        desc.text = "Descripcion";
+        nombre.text = "";
+        desc.text = "";
     }
 
     public void RefreshInventory()
@@ -146,6 +155,7 @@ public class Inventory : MonoBehaviour
             {
                 prehecho = Instantiate(Inventory.inventario[wich].GetComponent<ItemGet>().info.Modelo, cube.transform.position, cube.transform.rotation, cube.transform);
                 instanciado = true;
+                prehecho.GetComponent<MeshRenderer>().renderingLayerMask = 7;
             }
             nombre.text = inventario[wich].GetComponent<ItemGet>().info.ItemName;
             desc.text = inventario[wich].GetComponent<ItemGet>().info.Descrip;
