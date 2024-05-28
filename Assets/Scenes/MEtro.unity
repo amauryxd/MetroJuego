@@ -1623,7 +1623,7 @@ MonoBehaviour:
   SonidosRandom:
   - {fileID: 8300000, guid: 1bc8a5a96e1dade4594cd1a9a577cce1, type: 3}
   - {fileID: 8300000, guid: c81948cfc722ee64083785eedbd39b1b, type: 3}
-  - {fileID: 8300000, guid: 1bc8a5a96e1dade4594cd1a9a577cce1, type: 3}
+  - {fileID: 8300000, guid: 2ac646194af9e094c9798a48efba742d, type: 3}
   time: 10
   indicador: 0
 --- !u!82 &419989182
