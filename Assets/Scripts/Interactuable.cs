@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interactuable : MonoBehaviour
 {
+    
     public static bool Dialogue2 = false;
     private void OnTriggerEnter(Collider other)
     {

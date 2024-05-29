@@ -13,7 +13,7 @@ public class Interaction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -22,11 +22,12 @@ public class Interaction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
-            if(Physics.Raycast(r, out RaycastHit hitinfo, InteractRange))
+            if (Physics.Raycast(r, out RaycastHit hitinfo, InteractRange))
             {
-                if(hitinfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                if (hitinfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
                 {
                     interactObj.Interact();
+                   
                 }
             }
         }

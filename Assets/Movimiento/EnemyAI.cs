@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-
+   
     MeshRenderer meshRenderer;
 
     public NavMeshAgent agent;
@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
 
     public LayerMask whatIsGround, whatIsPlayer;
-
+  
     //Patrol
     public Vector3 walKPoint;
     bool walkPointSet;
@@ -27,9 +27,14 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     public Animator animator;
+    //audio
+    public AudioSource musica;
+    bool playsound;
+    bool soundplayed =false;
 
     private void Start()
     {
+        
         meshRenderer = GetComponent<MeshRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
@@ -37,16 +42,38 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
+
+        
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) Chasing();
-        if (playerInSightRange && playerInAttackRange) Attacking();
+        if (!playerInSightRange && !playerInAttackRange)
+        {
+            Patrolling();
+            playsound = false;
+        }
+        if (playerInSightRange && !playerInAttackRange)
+        {
+            Chasing();
+            playsound = true;
+            if(!soundplayed)
+            { 
+            StartCoroutine(Sonido());
+            }
+
+        }
+        if (playerInSightRange && playerInAttackRange)
+        { Attacking();
+            playsound = false;
+        }
+
+         
+
     }
 
     private void Patrolling()
     {
+        soundplayed = false;
         meshRenderer.material.color = Color.green;
 
         animator.SetBool("Run", false);
@@ -62,32 +89,40 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void SearchWalkPoint()
+
     {
+        
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
         walKPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
         if(Physics.Raycast(walKPoint, -transform.up, 2f, whatIsGround)) walkPointSet = true;
+
     }
 
     private void Chasing()
     {
+        
         meshRenderer.material.color = Color.yellow;
 
         animator.SetBool("Run", true);
 
         agent.SetDestination(player.position);
+
+        
+       
     }
 
     private void Attacking()
     {
+        
         meshRenderer.material.color = Color.red;
 
         animator.SetTrigger("Attack");
 
         animator.SetBool("Run", false);
-
+       
         agent.SetDestination(transform.position);
         transform.LookAt(player);
 
@@ -109,5 +144,16 @@ public class EnemyAI : MonoBehaviour
         Gizmos.DrawSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+    private IEnumerator Sonido()
+    {
+        if (playsound)
+        {
+            musica.Play(0);
+            Debug.Log("uwu");
+            soundplayed = true;
+        }
+        
+        yield return new WaitForSeconds(5f);    
     }
 }

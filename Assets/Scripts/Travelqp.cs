@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Travelqp : MonoBehaviour
 {
+
     public AudioClip SonidosRandom;
     private AudioSource source;
     public GameObject PanelMap;
