@@ -12,8 +12,6 @@ public class Audio : MonoBehaviour
     void Start()
     {
         source = GetComponent<AudioSource>();
-        
-
     }
 
     // Update is called once per frame

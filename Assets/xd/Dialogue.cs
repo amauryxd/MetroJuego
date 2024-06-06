@@ -31,7 +31,7 @@ public class Dialogue : MonoBehaviour
             startdiaogue();
 
             if (Input.GetKeyDown(KeyCode.Return))
-        {
+            {
             if(Dialoguetext.text == lines[index])
             {
                 nextline();
@@ -42,23 +42,8 @@ public class Dialogue : MonoBehaviour
                 Dialoguetext.text = lines[index];
             }
                
+            }   
         }
-        }
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            if (Dialoguetext.text == lines[index])
-            {
-                nextline();
-            }
-            else
-            {
-                StopAllCoroutines();
-                Dialoguetext.text = lines[index];
-            }
-
-        }
-
-
     }
     public void startdiaogue()
     {
