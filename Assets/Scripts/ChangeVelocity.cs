@@ -9,7 +9,10 @@ public class ChangeVelocity : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        movement.PLYspeed = playerSpeed;
-        movement.gravedad = playerGrav;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            movement.PLYspeed = playerSpeed;
+            movement.gravedad = playerGrav;
+        }
     }
 }

@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/OutdoorsScene.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
+    path: Assets/Scenes/Menu.unity
+    guid: 07a6228a4f5832c4cbfefad03563a83d
   - enabled: 1
-    path: Assets/Scenes/MEtro.unity
-    guid: f002142d8e104b94c987736ca3d3f0c0
-  - enabled: 1
-    path: Assets/Movimiento/Movimiento.unity
-    guid: d3d6ead4c3f44744e9211affe792ee45
+    path: Assets/Scenes/FirstLevel.unity
+    guid: 0a6bf00a587506e4795a5b9a42f3de25
   m_configObjects: {}

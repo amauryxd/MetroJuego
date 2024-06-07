@@ -32,6 +32,8 @@ public class EnemyAI : MonoBehaviour
     bool playsound;
     bool soundplayed =false;
 
+    
+
     private void Start()
     {
         

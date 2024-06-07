@@ -50,6 +50,7 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I) && abierto==false)
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             canMoveCamera = false;
             containerxd.SetActive(true);
             abierto = true;
@@ -60,6 +61,7 @@ public class Inventory : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.I) && abierto ==true)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             canMoveCamera = true;
             containerxd.SetActive(false);
             abierto = false;

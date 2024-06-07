@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int vidaMaloso = 100;
+    public int vidaMaloso = 5;
+    public bool isDead = false;
+    public GameObject enemyfull;
     private void Update()
     {
-        //Debug.Log(vidaMaloso);
+        if(vidaMaloso == 0)
+        {
+            isDead = true;
+            Destroy(enemyfull);
+        }
     }
-    
 }
        
             
